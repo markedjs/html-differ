@@ -31,7 +31,7 @@
     "chalk": "^5.0.0",
     "coa": "^2.0.2",
     "diff": "^5.0.0",
-    "parse5-sax-parser": "^6.0.1"
+    "parse5-sax-parser": "^7.0.0"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.0",
