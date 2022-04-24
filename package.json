@@ -28,24 +28,24 @@
     "url": "git://github.com/markedjs/html-differ.git"
   },
   "dependencies": {
-    "chalk": "^5.0.0",
+    "chalk": "^5.0.1",
     "coa": "^2.0.2",
     "diff": "^5.0.0",
-    "parse5-sax-parser": "^6.0.1"
+    "parse5-sax-parser": "^7.0.0"
   },
   "devDependencies": {
-    "@semantic-release/changelog": "^6.0.0",
-    "@semantic-release/commit-analyzer": "^9.0.1",
-    "@semantic-release/git": "^10.0.0",
-    "@semantic-release/github": "^8.0.0",
-    "@semantic-release/npm": "^9.0.0",
-    "@semantic-release/release-notes-generator": "^10.0.2",
-    "eslint": "^7.14.0",
-    "eslint-config-standard": "^16.0.2",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-node": "^11.1.0",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.4",
+    "@semantic-release/npm": "^9.0.1",
+    "@semantic-release/release-notes-generator": "^10.0.3",
+    "eslint": "^8.14.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.1.0",
     "eslint-plugin-promise": "^6.0.0",
-    "mocha": "^9.0.0",
+    "mocha": "^9.2.2",
     "must": "^0.13.4",
     "nyc": "^15.1.0",
     "semantic-release": "^19.0.2"
