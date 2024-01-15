@@ -48,7 +48,7 @@
     "mocha": "^10.0.0",
     "must": "^0.13.4",
     "nyc": "^15.1.0",
-    "semantic-release": "^22.0.0"
+    "semantic-release": "^23.0.0"
   },
   "scripts": {
     "test": "npm run lint && npm run unit-test && npm run func-test && npm run logger-test && npm run cover",
