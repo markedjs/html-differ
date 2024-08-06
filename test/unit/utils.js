@@ -9,7 +9,7 @@ describe('\'utils\'', function() {
         { name: 'b', value: 'a' },
         { name: 'b', value: 'c' },
         { name: 'a', value: 'z' },
-        { name: 'z', value: 'a' }
+        { name: 'z', value: 'a' },
       ],
       output = [
         { name: 'a', value: 'z' },
@@ -18,7 +18,7 @@ describe('\'utils\'', function() {
         { name: 'b', value: 'c' },
         { name: 'c', value: 'c' },
         { name: 'z', value: 'a' },
-        { name: 'z', value: 'a' }
+        { name: 'z', value: 'a' },
       ];
 
     utils.sortAttrs(input).must.be.eql(output);
@@ -29,13 +29,13 @@ describe('\'utils\'', function() {
         { name: 'class', value: ' b c a' },
         { name: 'blah', value: 'b c a' },
         { name: 'class', value: '' },
-        { name: 'class', value: 'a a a' }
+        { name: 'class', value: 'a a a' },
       ],
       output = [
         { name: 'class', value: 'a b c' },
         { name: 'blah', value: 'b c a' },
         { name: 'class', value: '' },
-        { name: 'class', value: 'a' }
+        { name: 'class', value: 'a' },
       ];
 
     utils.sortCssClasses(input).must.be.eql(output);
@@ -45,21 +45,21 @@ describe('\'utils\'', function() {
     const options = [
         'a',
         { name: 'onclick', isFunction: true },
-        { name: 'ondblclick', isFunction: true }
+        { name: 'ondblclick', isFunction: true },
       ],
       input = [
         { name: 'a', value: '{"b":{"b":"b","a":"a"},"a":"a"}' },
         { name: 'a', value: '{"a":"b","b":"a"}' },
         { name: 'onclick', value: 'return {"b":{"b":"b","a":"a"},"a":"a"}' },
         { name: 'ondblclick', value: 'return {"b":{"b":"b","a":"a"},"a":"a"}' },
-        { name: 'c', value: '{"c":"c"}' }
+        { name: 'c', value: '{"c":"c"}' },
       ],
       output = [
         { name: 'a', value: '{"a":"a","b":{"a":"a","b":"b"}}' },
         { name: 'a', value: '{"a":"b","b":"a"}' },
         { name: 'onclick', value: 'return {"a":"a","b":{"a":"a","b":"b"}}' },
         { name: 'ondblclick', value: 'return {"a":"a","b":{"a":"a","b":"b"}}' },
-        { name: 'c', value: '{"c":"c"}' }
+        { name: 'c', value: '{"c":"c"}' },
       ];
 
     utils.sortAttrsValues(input, options).must.be.eql(output);
@@ -68,15 +68,15 @@ describe('\'utils\'', function() {
   it('must correctly sort attributes\' values which are objects inside arrays', function() {
     const options = [
         'a',
-        { name: 'onclick', isFunction: true }
+        { name: 'onclick', isFunction: true },
       ],
       input = [
         { name: 'a', value: '{"a":[{"b":"b","a":"a"}]}' },
-        { name: 'onclick', value: 'return {"a":[{"b":"b","a":"a"}]}' }
+        { name: 'onclick', value: 'return {"a":[{"b":"b","a":"a"}]}' },
       ],
       output = [
         { name: 'a', value: '{"a":[{"a":"a","b":"b"}]}' },
-        { name: 'onclick', value: 'return {"a":[{"a":"a","b":"b"}]}' }
+        { name: 'onclick', value: 'return {"a":[{"a":"a","b":"b"}]}' },
       ];
 
     utils.sortAttrsValues(input, options).must.be.eql(output);
@@ -87,13 +87,13 @@ describe('\'utils\'', function() {
         { name: 'a', value: 'a' },
         { name: 'a', value: 'a' },
         { name: 'b', value: 'b' },
-        { name: 'c', value: 'c' }
+        { name: 'c', value: 'c' },
       ],
       output = [
         { name: 'a', value: '' },
         { name: 'a', value: '' },
         { name: 'b', value: '' },
-        { name: 'c', value: 'c' }
+        { name: 'c', value: 'c' },
       ];
 
     utils.removeAttrsValues(input, ['a', 'b']).must.be.eql(output);

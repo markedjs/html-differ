@@ -41,7 +41,7 @@ describe('\'serialize\'', function() {
     const attrs = [
         { name: 'id', value: '1' },
         { name: 'id', value: '2' },
-        { name: 'class', value: ' a b c' }
+        { name: 'class', value: ' a b c' },
       ],
       output = '<blah id="1" id="2" class=" a b c">';
 
