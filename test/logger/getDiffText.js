@@ -10,7 +10,7 @@ describe('\'getDiffText\'', function() {
     const inp = [{
       value: 'text',
       added: undefined,
-      removed: undefined
+      removed: undefined,
     }];
 
     diffLoger.getDiffText(inp, { charsAroundDiff: 20 }).must.be.equal('');
@@ -20,23 +20,23 @@ describe('\'getDiffText\'', function() {
     const inp = [{
         value: 'texttexttexttexttexttexttexttexttexttexttext',
         added: undefined,
-        removed: undefined
+        removed: undefined,
       }, {
         value: '!',
         added: true,
-        removed: undefined
+        removed: undefined,
       }, {
         value: 'Text',
         added: undefined,
-        removed: undefined
+        removed: undefined,
       }, {
         value: '!',
         added: true,
-        removed: undefined
+        removed: undefined,
       }, {
         value: 'texttexttexttext',
         added: undefined,
-        removed: undefined
+        removed: undefined,
       }],
       out = '\n...\n' + grey('texttexttexttexttext') + inverseGreen('!') + grey('Text') + inverseGreen('!')
                 + grey('texttexttexttext');
@@ -48,7 +48,7 @@ describe('\'getDiffText\'', function() {
     const inp = [{
       value: 'text',
       added: undefined,
-      removed: undefined
+      removed: undefined,
     }];
 
     diffLoger.getDiffText(inp, { charsAroundDiff: -5 }).must.be.equal('');
@@ -58,11 +58,11 @@ describe('\'getDiffText\'', function() {
     const inp = [{
         value: 'texttexttexttexttexttexttexttexttexttexttext',
         added: true,
-        removed: undefined
+        removed: undefined,
       }, {
         value: 'ololoololoololoololoololoololoololoololoolol',
         added: false,
-        removed: true
+        removed: true,
       }],
       out = '\n' + inverseGreen('texttexttexttexttexttexttexttexttexttexttext')
                 + inverseRed('ololoololoololoololoololoololoololoololoolol');
@@ -74,15 +74,15 @@ describe('\'getDiffText\'', function() {
     const inp = [{
         value: 'texttexttext',
         added: undefined,
-        removed: undefined
+        removed: undefined,
       }, {
         value: 'text',
         added: undefined,
-        removed: true
+        removed: true,
       }, {
         value: 'texttexttexttext',
         added: undefined,
-        removed: undefined
+        removed: undefined,
       }],
       out = '\n' + grey('texttexttext') + inverseRed('text') + grey('texttexttexttext');
 
@@ -93,31 +93,31 @@ describe('\'getDiffText\'', function() {
     const inp = [{
         value: 'texttexttexttexttexttexttexttexttexttexttext',
         added: undefined,
-        removed: undefined
+        removed: undefined,
       }, {
         value: 'text',
         added: undefined,
-        removed: true
+        removed: true,
       }, {
         value: 'texttexttexttexttexttexttexttexttexttexttext',
         added: undefined,
-        removed: undefined
+        removed: undefined,
       }, {
         value: '!',
         added: true,
-        removed: false
+        removed: false,
       }, {
         value: 'text',
         added: undefined,
-        removed: undefined
+        removed: undefined,
       }, {
         value: '!',
         added: true,
-        removed: false
+        removed: false,
       }, {
         value: 'texttexttexttexttexttexttexttexttexttext',
         added: undefined,
-        removed: undefined
+        removed: undefined,
       }],
       out = '\n...\n' + grey('texttexttexttexttext') + inverseRed('text')
                 + grey('texttexttexttexttext') + '\n...\n' + grey('texttexttexttexttext')

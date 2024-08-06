@@ -9,7 +9,7 @@ function run(...args) {
     return cli.run([
       'node',
       'html-differ',
-      ...args
+      ...args,
     ]);
   };
 }

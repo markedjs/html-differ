@@ -17,7 +17,7 @@ function readFiles(basename) {
   const fileName = basename + '.html';
   return Promise.all([
     readAsync(path.join(fixturesPath, 'first', fileName), 'utf-8'),
-    readAsync(path.join(fixturesPath, 'second', fileName), 'utf-8')
+    readAsync(path.join(fixturesPath, 'second', fileName), 'utf-8'),
   ]);
 }
 
@@ -82,8 +82,8 @@ describe('\'isEqual\'', function() {
     const options = {
       compareAttributesAsJSON: [
         { name: 'onclick', isFunction: true },
-        { name: 'ondblclick', isFunction: true }
-      ]
+        { name: 'ondblclick', isFunction: true },
+      ],
     };
     const htmlDiffer = new HtmlDiffer(options);
     const files = await readFiles('sort-functions-in-json-format');
