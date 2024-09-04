@@ -1,3 +1,12 @@
+## [5.0.1](https://github.com/markedjs/html-differ/compare/v5.0.0...v5.0.1) (2024-09-04)
+
+
+### Bug Fixes
+
+* blank strings are equal ([0a0e85e](https://github.com/markedjs/html-differ/commit/0a0e85e151440b3286275c5ad7ea51b488f03194))
+* pass options to diff ([049cc7f](https://github.com/markedjs/html-differ/commit/049cc7fc23589822c4620b9e573ea43a1af058f1))
+* update deps ([a772b10](https://github.com/markedjs/html-differ/commit/a772b106d868c6ae696d2085c0c6773d60b01cff))
+
 # [5.0.0](https://github.com/markedjs/html-differ/compare/v4.0.2...v5.0.0) (2024-09-04)
 
 
