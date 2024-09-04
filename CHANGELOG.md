@@ -1,3 +1,15 @@
+# [5.0.0](https://github.com/markedjs/html-differ/compare/v4.0.2...v5.0.0) (2024-09-04)
+
+
+### Bug Fixes
+
+* **deps:** Bump diff from 5.2.0 to 6.0.0 ([#392](https://github.com/markedjs/html-differ/issues/392)) ([4b0d162](https://github.com/markedjs/html-differ/commit/4b0d16200b97f8096ec636c12e9d3d9aa12e6f01))
+
+
+### BREAKING CHANGES
+
+* **deps:** update diff to v6 ([changelog](https://github.com/kpdecker/jsdiff/blob/master/release-notes.md#600-currently-in-beta))
+
 ## [4.0.2](https://github.com/markedjs/html-differ/compare/v4.0.1...v4.0.2) (2022-04-24)
 
 
