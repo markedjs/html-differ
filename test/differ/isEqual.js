@@ -180,4 +180,11 @@ describe('\'isEqual\'', function() {
 
     invalidPreset.must.throw(Error);
   });
+
+  it('blank values are equal', async function() {
+    const htmlDiffer = new HtmlDiffer();
+    const isEqual = await htmlDiffer.isEqual('', '');
+
+    isEqual.must.be.true();
+  });
 });
