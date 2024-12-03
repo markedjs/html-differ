@@ -43,7 +43,7 @@
     "@semantic-release/release-notes-generator": "^14.0.1",
     "eslint": "^9.9.1",
     "globals": "^15.9.0",
-    "mocha": "^10.7.3",
+    "mocha": "^11.0.1",
     "must": "^0.13.4",
     "nyc": "^17.0.0",
     "semantic-release": "^24.1.0"
