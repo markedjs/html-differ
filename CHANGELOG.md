@@ -1,3 +1,10 @@
+## [5.0.3](https://github.com/markedjs/html-differ/compare/v5.0.2...v5.0.3) (2025-11-04)
+
+
+### Bug Fixes
+
+* refactor presets import to use JSON module syntax ([#516](https://github.com/markedjs/html-differ/issues/516)) ([155c7c5](https://github.com/markedjs/html-differ/commit/155c7c5f6f831f50ae607bfa59178af786c4ccc1))
+
 ## [5.0.2](https://github.com/markedjs/html-differ/compare/v5.0.1...v5.0.2) (2025-05-12)
 
 
