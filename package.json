@@ -1,6 +1,6 @@
 {
   "name": "@markedjs/html-differ",
-  "version": "5.0.3",
+  "version": "5.0.4",
   "description": "Compares two HTML",
   "keywords": [
     "html-differ",

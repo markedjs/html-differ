@@ -1,3 +1,10 @@
+## [5.0.4](https://github.com/markedjs/html-differ/compare/v5.0.3...v5.0.4) (2025-12-26)
+
+
+### Bug Fixes
+
+* Synchronous HtmlDiff ([#527](https://github.com/markedjs/html-differ/issues/527)) ([bb0e05a](https://github.com/markedjs/html-differ/commit/bb0e05acf143fb6affe29b95c0e25320ccf10f0f))
+
 ## [5.0.3](https://github.com/markedjs/html-differ/compare/v5.0.2...v5.0.3) (2025-11-04)
 
 
