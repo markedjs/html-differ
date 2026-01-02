@@ -42,7 +42,7 @@
     "@semantic-release/npm": "^13.0.0",
     "@semantic-release/release-notes-generator": "^14.0.1",
     "eslint": "^9.9.1",
-    "globals": "^16.0.0",
+    "globals": "^17.0.0",
     "mocha": "^11.0.1",
     "must": "^0.13.4",
     "nyc": "^17.0.0",
