@@ -1,67 +1,66 @@
 name: "CI"
 on:
-  pull_request:
-  push:
-    branches:
-      - master
+    pull_request:
+    push:
+        branches:
+            - master
+
+permissions:
+    contents: read
 
 jobs:
+    Test:
+        if: "!contains(github.event.head_commit.message, '[skip ci]')"
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v6
+            - name: Install Node
+              uses: actions/setup-node@v6
+              with:
+                  node-version: "*"
+            - name: Install Dependencies
+              run: npm ci
+            - name: Run Tests 👩🏽‍💻
+              run: |
+                  npm run unit-test
+                  npm run func-test
+                  npm run logger-test
 
-  Test:
-    if: "!contains(github.event.head_commit.message, '[skip ci]')"
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v6
-      - name: Install Node
-        uses: actions/setup-node@v6
-        with:
-          node-version: '*'
-      - name: Install Dependencies
-        run: npm ci
-      - name: Run Tests 👩🏽‍💻
-        run: |
-          npm run unit-test
-          npm run func-test
-          npm run logger-test
+    Lint:
+        if: "!contains(github.event.head_commit.message, '[skip ci]')"
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v6
+            - name: Install Node
+              uses: actions/setup-node@v6
+              with:
+                  node-version: "lts/*"
+            - name: Install Dependencies
+              run: npm ci
+            - name: Lint ✨
+              run: npm run lint
 
-  Lint:
-    if: "!contains(github.event.head_commit.message, '[skip ci]')"
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v6
-      - name: Install Node
-        uses: actions/setup-node@v6
-        with:
-          node-version: 'lts/*'
-      - name: Install Dependencies
-        run: npm ci
-      - name: Lint ✨
-        run: npm run lint
-
-  Release:
-    needs: [Test, Lint]
-    if: github.ref == 'refs/heads/master'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v6
-      - name: Install Node
-        uses: actions/setup-node@v6
-        with:
-          node-version: 'lts/*'
-      - name: Install Dependencies
-        run: npm ci
-      - name: Release 🎉
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release
-
-  Skip:
-    if: contains(github.event.head_commit.message, '[skip ci]')
-    runs-on: ubuntu-latest
-    steps:
-      - name: Skip CI 🚫
-        run: echo skip ci
+    Release:
+        permissions:
+            contents: write # to be able to publish a GitHub release
+            issues: write # to be able to comment on released issues
+            pull-requests: write # to be able to comment on released pull requests
+            id-token: write # to enable use of OIDC for trusted publishing and npm provenance
+        needs: [Test, Lint]
+        if: github.ref == 'refs/heads/master'
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v6
+            - name: Install Node
+              uses: actions/setup-node@v6
+              with:
+                  node-version: "lts/*"
+            - name: Install Dependencies
+              run: npm ci
+            - name: Release 🎉
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: npx semantic-release
