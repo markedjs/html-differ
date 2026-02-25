@@ -45,7 +45,7 @@
     "globals": "^17.1.0",
     "mocha": "^11.7.5",
     "must": "^0.13.4",
-    "nyc": "^17.1.0",
+    "nyc": "^18.0.0",
     "semantic-release": "^25.0.2"
   },
   "scripts": {
