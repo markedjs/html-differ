@@ -30,7 +30,7 @@
   "dependencies": {
     "chalk": "^5.6.2",
     "coa": "^2.0.2",
-    "diff": "^8.0.3",
+    "diff": "^9.0.0",
     "parse5-sax-parser": "^8.0.0"
   },
   "devDependencies": {
